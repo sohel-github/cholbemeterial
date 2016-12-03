@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="100"
+        android:background="@drawable/background_with_shadow"
+        android:padding="10dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="1dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="80">
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ci"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="20">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="40px"
+                android:text="Hello"
+                android:textColor="#656565"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/contactTitle"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="World"
+                android:textColor="#656565"
+                android:textStyle="bold"
+                android:layout_marginLeft="5dp"
+                android:textSize="30px"
+                android:id="@+id/contactDeg"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="World"
+                android:textColor="#656565"
+                android:layout_marginLeft="5dp"
+                android:textSize="30px"
+                android:id="@+id/contactDetail"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
