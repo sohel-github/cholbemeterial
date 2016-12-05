@@ -41,6 +41,20 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".EditContact">
+            <intent-filter>
+                <action android:name="com.walletmix.humayunkabir.cholbe.EDITCONTACT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".DetailContact">
+            <intent-filter>
+                <action android:name="com.walletmix.humayunkabir.cholbe.DETAILCONTACT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>

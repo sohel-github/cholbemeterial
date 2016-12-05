@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/tool_bar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#f5f5f5"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/person"
+                    android:id="@+id/personImage" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f0f0f0"
+                android:layout_marginTop="10dp"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:textAllCaps="true"
+                    android:textStyle="bold|italic"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="100"
+                android:padding="5dp"
+                android:orientation="horizontal">
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:textColorHint="#4a4a4a">
+                    <EditText android:id="@+id/edit_contact_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_bg"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:inputType="text"
+                        android:text="John Doe" />
+                </android.support.design.widget.TextInputLayout>
+                <ImageView
+                    android:id="@+id/close_icon_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/close"
+                    android:layout_weight="95"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f0f0f0"
+                android:layout_marginTop="10dp"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Job Title"
+                    android:textAllCaps="true"
+                    android:textStyle="bold|italic"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="100"
+                android:padding="5dp"
+                android:orientation="horizontal">
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:textColorHint="#4a4a4a">
+                    <EditText android:id="@+id/edit_contact_job_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_bg"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:inputType="text"
+                        android:text="Assistant Manager" />
+                </android.support.design.widget.TextInputLayout>
+                <ImageView
+                    android:id="@+id/close_icon_job_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/close"
+                    android:layout_weight="95"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f0f0f0"
+                android:layout_marginTop="10dp"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Phone Number"
+                    android:textAllCaps="true"
+                    android:textStyle="bold|italic"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/edit_contact_phone_number_spinner_1"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="1dp"
+                    />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="#4a4a4a">
+
+                    <EditText android:id="@+id/edit_contact_phone_1"
+                        android:layout_width="230dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_bg"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="15dp"
+                        android:inputType="number"
+                        android:text="01717111222" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/close_icon_phone_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/close"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/edit_contact_phone_number_spinner_2"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="1dp"
+                    />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="#4a4a4a">
+
+                    <EditText android:id="@+id/edit_contact_phone_2"
+                        android:layout_width="230dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_bg"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="15dp"
+                        android:inputType="number"
+                        android:text="01676222111" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/close_icon_phone_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/close"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f0f0f0"
+                android:layout_marginTop="10dp"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email Address"
+                    android:textAllCaps="true"
+                    android:textStyle="bold|italic"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/edit_contact_email_address_spinner_1"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="1dp"
+                    />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="#4a4a4a">
+
+                    <EditText android:id="@+id/edit_email_address_1"
+                        android:layout_width="230dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_bg"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="15dp"
+                        android:inputType="textEmailAddress"
+                        android:text="name@email.com" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/close_icon_email_address_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/close"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/edit_contact_email_address_spinner_2"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="1dp"
+                    />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="#4a4a4a">
+
+                    <EditText android:id="@+id/edit_contact_email_address_2"
+                        android:layout_width="230dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_bg"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="15dp"
+                        android:inputType="number"
+                        android:text="jondow@email.com" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/close_icon_email_address_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/close"
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f0f0f0"
+                android:layout_marginTop="10dp"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Company"
+                    android:textAllCaps="true"
+                    android:textStyle="bold|italic"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="100"
+                android:padding="5dp"
+                android:orientation="horizontal">
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:textColorHint="#4a4a4a">
+                    <EditText android:id="@+id/edit_contact_company"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_bg"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:inputType="text"
+                        android:text="Assistant Manager" />
+                </android.support.design.widget.TextInputLayout>
+                <ImageView
+                    android:id="@+id/close_icon_company"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/close"
+                    android:layout_weight="95"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f0f0f0"
+                android:layout_marginTop="10dp"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Blood Group"
+                    android:textAllCaps="true"
+                    android:textStyle="bold|italic"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="100"
+                android:padding="5dp"
+                android:orientation="horizontal">
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:textColorHint="#4a4a4a">
+                    <EditText android:id="@+id/edit_contact_blood_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_bg"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:inputType="text"
+                        android:text="Assistant Manager" />
+                </android.support.design.widget.TextInputLayout>
+                <ImageView
+                    android:id="@+id/close_icon_blood_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/close"
+                    android:layout_weight="95"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f0f0f0"
+                android:layout_marginTop="10dp"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Website"
+                    android:textAllCaps="true"
+                    android:textStyle="bold|italic"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="100"
+                android:padding="5dp"
+                android:orientation="horizontal">
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:textColorHint="#4a4a4a">
+                    <EditText android:id="@+id/edit_contact_website"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_bg"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:inputType="text"
+                        android:text="Assistant Manager" />
+                </android.support.design.widget.TextInputLayout>
+                <ImageView
+                    android:id="@+id/close_icon_website"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/close"
+                    android:layout_weight="95"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f0f0f0"
+                android:layout_marginTop="10dp"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SSN Account"
+                    android:textAllCaps="true"
+                    android:textStyle="bold|italic"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="100"
+                android:padding="5dp"
+                android:orientation="horizontal">
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:textColorHint="#4a4a4a">
+                    <EditText android:id="@+id/edit_contact_ssn_account"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_bg"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:inputType="text"
+                        android:text="Assistant Manager" />
+                </android.support.design.widget.TextInputLayout>
+                <ImageView
+                    android:id="@+id/close_icon_ssn_account"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/close"
+                    android:layout_weight="95"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f0f0f0"
+                android:layout_marginTop="10dp"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Notes"
+                    android:textAllCaps="true"
+                    android:textStyle="bold|italic"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="100"
+                android:padding="5dp"
+                android:orientation="horizontal">
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:textColorHint="#4a4a4a">
+                    <EditText android:id="@+id/edit_contact_notes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_bg"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:inputType="text"
+                        android:text="Assistant Manager" />
+                </android.support.design.widget.TextInputLayout>
+                <ImageView
+                    android:id="@+id/close_icon_notes"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/close"
+                    android:layout_weight="95"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f0f0f0"
+                android:layout_marginTop="10dp"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nick Name"
+                    android:textAllCaps="true"
+                    android:textStyle="bold|italic"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="100"
+                android:padding="5dp"
+                android:orientation="horizontal">
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:textColorHint="#4a4a4a">
+                    <EditText android:id="@+id/edit_contact_nick_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_bg"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:inputType="text"
+                        android:text="Assistant Manager" />
+                </android.support.design.widget.TextInputLayout>
+                <ImageView
+                    android:id="@+id/close_icon_nick_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/close"
+                    android:layout_weight="95"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f0f0f0"
+                android:layout_marginTop="10dp"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Every Day"
+                    android:textAllCaps="true"
+                    android:textStyle="bold|italic"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="100"
+                android:padding="5dp"
+                android:orientation="horizontal">
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:textColorHint="#4a4a4a">
+                    <EditText android:id="@+id/edit_contact_every_day"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_bg"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:inputType="text"
+                        android:text="Assistant Manager" />
+                </android.support.design.widget.TextInputLayout>
+                <ImageView
+                    android:id="@+id/close_icon_every_day"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/close"
+                    android:layout_weight="95"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f0f0f0"
+                android:layout_marginTop="10dp"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Relations"
+                    android:textAllCaps="true"
+                    android:textStyle="bold|italic"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="100"
+                android:padding="5dp"
+                android:orientation="horizontal">
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:textColorHint="#4a4a4a">
+                    <EditText android:id="@+id/edit_contact_relations"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_bg"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:inputType="text"
+                        android:text="Assistant Manager" />
+                </android.support.design.widget.TextInputLayout>
+                <ImageView
+                    android:id="@+id/close_icon_relations"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/close"
+                    android:layout_weight="95"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

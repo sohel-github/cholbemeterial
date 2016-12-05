@@ -1,3 +1,19 @@
 <resources>
+
     <string name="app_name">Cholbe</string>
+
+    <string-array name="phone_number_array">
+        <item>Mobile</item>
+        <item>Work</item>
+        <item>Home</item>
+        <item>Other</item>
+        <item>Custom</item>
+    </string-array>
+
+    <string-array name="email_spinner">
+        <item>Home</item>
+        <item>Work</item>
+        <item>Other</item>
+    </string-array>
+
 </resources>

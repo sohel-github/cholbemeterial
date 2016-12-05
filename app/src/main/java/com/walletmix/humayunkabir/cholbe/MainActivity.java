@@ -91,6 +91,13 @@ public class MainActivity extends AppCompatActivity {
 
             return true;
         }
+        if (id == R.id.edit_contact) {
+
+            Intent editContact = new Intent("com.walletmix.humayunkabir.cholbe.DETAILCONTACT");
+            startActivity(editContact);
+
+            return true;
+        }
         return super.onOptionsItemSelected(item);
     }
 

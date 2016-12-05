@@ -8,35 +8,46 @@
         android:id="@+id/toolbar"
         layout="@layout/tool_bar"/>
 
-
-    <LinearLayout
-        android:orientation="horizontal"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:weightSum="100">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="60">
-            <ImageView
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:padding="20dp"
-                android:src="@drawable/profile_img"
-                android:background="@drawable/background_with_shadow"
-                android:id="@+id/uploadImage" />
-        </LinearLayout>
-
-        <LinearLayout
+            android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="10dp"
-            android:layout_weight="40">
+            android:padding="10dp">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#f5f5f5"
+                android:padding="10dp"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:padding="20dp"
+                    android:src="@drawable/profile_img"
+                    android:background="@drawable/background_with_shadow"
+                    android:id="@+id/uploadImage" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f0f0f0"
+                android:layout_marginTop="10dp"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:textAllCaps="true"
+                    android:textStyle="bold|italic"/>
+            </LinearLayout>
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -44,11 +55,28 @@
                 <EditText android:id="@+id/add_contact_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_bg"
                     android:paddingTop="15dp"
                     android:paddingBottom="15dp"
                     android:inputType="text"
+                    android:textSize="14sp"
+                    android:textStyle="italic"
                     android:hint="Your name" />
             </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f0f0f0"
+                android:layout_marginTop="10dp"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Job Title"
+                    android:textAllCaps="true"
+                    android:textStyle="bold|italic"/>
+            </LinearLayout>
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -56,38 +84,333 @@
                 <EditText android:id="@+id/add_contact_job_title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_bg"
                     android:paddingTop="15dp"
                     android:paddingBottom="15dp"
                     android:inputType="text"
+                    android:textSize="14sp"
+                    android:textStyle="italic"
                     android:hint="Job Title" />
             </android.support.design.widget.TextInputLayout>
 
-        </LinearLayout>
-
-    </LinearLayout> <!-- Form First Section -->
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="10dp">
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColorHint="#4a4a4a">
-            <EditText android:id="@+id/add_contact_phone"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="15dp"
-                android:paddingBottom="15dp"
-                android:maxLength="11"
-                android:inputType="number"
-                android:hint="Phone Number" />
-        </android.support.design.widget.TextInputLayout>
+                android:background="#f0f0f0"
+                android:layout_marginTop="10dp"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Phone Number"
+                    android:textAllCaps="true"
+                    android:textStyle="bold|italic"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="100"
+                android:orientation="horizontal">
+                <Spinner
+                    android:id="@+id/phone_number_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="75"/>
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="25"
+                    android:textColorHint="#4a4a4a">
+                    <EditText android:id="@+id/add_contact_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_bg"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:maxLength="11"
+                        android:textSize="14sp"
+                        android:textStyle="italic"
+                        android:inputType="number"
+                        android:hint="Phone Number" />
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
 
-    </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f0f0f0"
+                android:layout_marginTop="10dp"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email Address"
+                    android:textAllCaps="true"
+                    android:textStyle="bold|italic"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="100"
+                android:orientation="horizontal">
+                <Spinner
+                    android:id="@+id/email_spiner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="75"/>
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="25"
+                    android:textColorHint="#4a4a4a">
+                    <EditText android:id="@+id/add_contact_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_bg"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:textSize="14sp"
+                        android:textStyle="italic"
+                        android:inputType="textEmailAddress"
+                        android:hint="Email Address" />
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f0f0f0"
+                android:layout_marginTop="10dp"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Company"
+                    android:textAllCaps="true"
+                    android:textStyle="bold|italic"/>
+            </LinearLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="#4a4a4a">
+                <EditText android:id="@+id/add_contact_company"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_bg"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:inputType="text"
+                    android:textSize="14sp"
+                    android:textStyle="italic"
+                    android:hint="Company" />
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f0f0f0"
+                android:layout_marginTop="10dp"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Blood Group"
+                    android:textAllCaps="true"
+                    android:textStyle="bold|italic"/>
+            </LinearLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="#4a4a4a">
+                <EditText android:id="@+id/add_contact_blood_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_bg"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:inputType="text"
+                    android:textSize="14sp"
+                    android:textStyle="italic"
+                    android:hint="Blood Group" />
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f0f0f0"
+                android:layout_marginTop="10dp"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Website"
+                    android:textAllCaps="true"
+                    android:textStyle="bold|italic"/>
+            </LinearLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="#4a4a4a">
+                <EditText android:id="@+id/add_contact_website"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_bg"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:inputType="textUri"
+                    android:textSize="14sp"
+                    android:textStyle="italic"
+                    android:hint="Website" />
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f0f0f0"
+                android:layout_marginTop="10dp"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SSN Account"
+                    android:textAllCaps="true"
+                    android:textStyle="bold|italic"/>
+            </LinearLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="#4a4a4a">
+                <EditText android:id="@+id/add_contact_ssn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_bg"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:inputType="textUri"
+                    android:textSize="14sp"
+                    android:textStyle="italic"
+                    android:hint="SSN Account" />
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f0f0f0"
+                android:layout_marginTop="10dp"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Notes"
+                    android:textAllCaps="true"
+                    android:textStyle="bold|italic"/>
+            </LinearLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="#4a4a4a">
+                <EditText android:id="@+id/add_contact_notes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_bg"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:inputType="text"
+                    android:textSize="14sp"
+                    android:textStyle="italic"
+                    android:hint="Notes" />
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f0f0f0"
+                android:layout_marginTop="10dp"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nick Name"
+                    android:textAllCaps="true"
+                    android:textStyle="bold|italic"/>
+            </LinearLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="#4a4a4a">
+                <EditText android:id="@+id/add_contact_nick_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_bg"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:inputType="text"
+                    android:textSize="14sp"
+                    android:textStyle="italic"
+                    android:hint="Nick Name" />
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f0f0f0"
+                android:layout_marginTop="10dp"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Every Day"
+                    android:textAllCaps="true"
+                    android:textStyle="bold|italic"/>
+            </LinearLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="#4a4a4a">
+                <EditText android:id="@+id/add_contact_everyday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_bg"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:inputType="text"
+                    android:textSize="14sp"
+                    android:textStyle="italic"
+                    android:hint="Every Day" />
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f0f0f0"
+                android:layout_marginTop="10dp"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Relations"
+                    android:textAllCaps="true"
+                    android:textStyle="bold|italic"/>
+            </LinearLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="#4a4a4a">
+                <EditText android:id="@+id/add_contact_relation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_bg"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:inputType="text"
+                    android:textSize="14sp"
+                    android:textStyle="italic"
+                    android:hint="Relations" />
+            </android.support.design.widget.TextInputLayout>
 
 
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>

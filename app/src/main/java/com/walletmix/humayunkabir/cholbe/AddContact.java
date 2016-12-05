@@ -8,15 +8,19 @@ import android.support.v7.widget.Toolbar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Spinner;
 
 public class AddContact extends AppCompatActivity implements View.OnClickListener{
 
 
     ImageView uploadImage;
+
+    Spinner phone_spiner_array, email_spiner;
 
 
     @Override
@@ -30,6 +34,17 @@ public class AddContact extends AppCompatActivity implements View.OnClickListene
 
         uploadImage = (ImageView) findViewById(R.id.uploadImage);
         uploadImage.setOnClickListener(this);
+
+
+        phone_spiner_array = (Spinner) findViewById(R.id.phone_number_spinner);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.phone_number_array, android.R.layout.simple_spinner_dropdown_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        phone_spiner_array.setAdapter(adapter);
+
+        email_spiner = (Spinner) findViewById(R.id.email_spiner);
+        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.email_spinner, android.R.layout.simple_spinner_dropdown_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        email_spiner.setAdapter(adapter2);
 
 
     }
