@@ -93,6 +93,13 @@ public class MainActivity extends AppCompatActivity {
         }
         if (id == R.id.edit_contact) {
 
+                Intent editContact = new Intent("com.walletmix.humayunkabir.cholbe.EDITCONTACT");
+            startActivity(editContact);
+
+            return true;
+        }
+        if (id == R.id.detail_contact) {
+
             Intent editContact = new Intent("com.walletmix.humayunkabir.cholbe.DETAILCONTACT");
             startActivity(editContact);
 
