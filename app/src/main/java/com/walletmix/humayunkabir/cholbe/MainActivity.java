@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         tabLayout = (TabLayout) findViewById(R.id.tab_layout);
         container = (LinearLayout) findViewById(R.id.fragment_container);
@@ -81,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
@@ -93,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
         }
         if (id == R.id.edit_contact) {
 
-                Intent editContact = new Intent("com.walletmix.humayunkabir.cholbe.EDITCONTACT");
+            Intent editContact = new Intent("com.walletmix.humayunkabir.cholbe.EDITCONTACT");
             startActivity(editContact);
 
             return true;
@@ -107,5 +109,6 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
 
 }

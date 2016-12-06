@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_with_shadow"
+        android:padding="10dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="1dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30px"
+                    android:text="Transaction ID : "
+                    android:textStyle="bold"
+                    android:textColor="#656565"
+                    android:layout_marginLeft="5dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="245874587654"
+                    android:textColor="#656565"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="30px"
+                    android:id="@+id/transactionID"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30px"
+                    android:text="Order ID : "
+                    android:textStyle="bold"
+                    android:textColor="#656565"
+                    android:layout_marginLeft="5dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="478365214"
+                    android:textColor="#656565"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="30px"
+                    android:id="@+id/orderID"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30px"
+                    android:text="Recharge Ammount : "
+                    android:textStyle="bold"
+                    android:textColor="#656565"
+                    android:layout_marginLeft="5dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="50"
+                    android:textColor="#656565"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="30px"
+                    android:id="@+id/rechargeAMMOUNT"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30px"
+                    android:text="Phone No : "
+                    android:textStyle="bold"
+                    android:textColor="#656565"
+                    android:layout_marginLeft="5dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="01717111222"
+                    android:textColor="#656565"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="30px"
+                    android:id="@+id/phoneNO"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30px"
+                    android:text="Recharge Type : "
+                    android:textStyle="bold"
+                    android:textColor="#656565"
+                    android:layout_marginLeft="5dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pre Paid"
+                    android:textColor="#656565"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="30px"
+                    android:id="@+id/rechargeTYPE"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30px"
+                    android:text="Remark : "
+                    android:textStyle="bold"
+                    android:textColor="#656565"
+                    android:layout_marginLeft="5dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nice"
+                    android:textColor="#656565"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="30px"
+                    android:id="@+id/rechargeREMARK"/>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

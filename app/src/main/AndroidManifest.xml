@@ -55,6 +55,20 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".ChangePin">
+            <intent-filter>
+                <action android:name="com.walletmix.humayunkabir.cholbe.CHANGEPIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".RechargeHistory">
+            <intent-filter>
+                <action android:name="com.walletmix.humayunkabir.cholbe.RECHARGEHISTORY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>

@@ -6,6 +6,10 @@ android:background="#fff"
 android:orientation="vertical">
 
 
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/tool_bar"/>
+
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
@@ -20,13 +24,13 @@ android:orientation="vertical">
             android:paddingRight="24dp">
 
 
-            <!-- Phone Number Label -->
+            <!-- Old Pin Label -->
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp">
-                <EditText android:id="@+id/input_phone_number"
+                <EditText android:id="@+id/input_old_pin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/edittext_recharge_bg"
@@ -34,39 +38,35 @@ android:orientation="vertical">
                     android:paddingBottom="15dp"
                     android:maxLength="11"
                     android:inputType="number"
-                    android:hint="Phone Number" />
+                    android:hint="Old Pin" />
             </android.support.design.widget.TextInputLayout>
 
 
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="16dp">
-
-                <RadioButton
-                    android:id="@+id/radioButtonPrepaid"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:checked="true"
-                    android:text="Prepaid" />
-
-                <RadioButton
-                    android:id="@+id/radioButtonPostPaid"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Postpaid" />
-
-            </RadioGroup>
-
-
-            <!-- Amount Label -->
+            <!-- New Pin Label -->
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp">
-                <EditText android:id="@+id/input_amount"
+                <EditText android:id="@+id/input_new_pin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_recharge_bg"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:maxLength="11"
+                    android:inputType="number"
+                    android:hint="New Pin" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <!-- Confirm Pin Label -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp">
+                <EditText android:id="@+id/input_confirm_pin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/edittext_recharge_bg"
@@ -74,11 +74,11 @@ android:orientation="vertical">
                     android:paddingBottom="15dp"
                     android:maxLength="4"
                     android:inputType="number"
-                    android:hint="Your Amount"/>
+                    android:hint="Confirm Pin"/>
             </android.support.design.widget.TextInputLayout>
 
             <android.support.v7.widget.AppCompatButton
-                android:id="@+id/btn_recharge"
+                android:id="@+id/btn_change_pin"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
@@ -87,7 +87,7 @@ android:orientation="vertical">
                 android:background="#b10a2a"
                 android:textColor="#fff"
                 android:textSize="18sp"
-                android:text="Recharge"/>
+                android:text="Change Pin"/>
 
         </LinearLayout>
 
