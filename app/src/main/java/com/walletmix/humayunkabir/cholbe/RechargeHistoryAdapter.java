@@ -18,8 +18,6 @@ public class RechargeHistoryAdapter extends BaseAdapter {
     final String [] rechargeTYPE;
     final String [] rechargeREMARK;
 
-    private static LayoutInflater inflater = null;
-
     public RechargeHistoryAdapter(Context context, String [] transactionID, String [] orderID, String [] rechargeAMMOUNT, String [] phoneNO, String [] rechargeTYPE, String [] rechargeREMARK) {
         this.context = context;
         this.transactionID = transactionID;
@@ -49,7 +47,7 @@ public class RechargeHistoryAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View rowView, ViewGroup parent) {
 
-        inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         rowView = inflater.inflate(R.layout.recharge_history_row, null);
 

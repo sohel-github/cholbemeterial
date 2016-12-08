@@ -10,7 +10,6 @@ import android.widget.ListView;
 public class RechargeHistory extends Activity {
 
     ListView lv;
-    Context context;
 
     String[] transactionID = {
             "245789365",
@@ -78,7 +77,7 @@ public class RechargeHistory extends Activity {
         setContentView(R.layout.recharge_history);
 
         lv=(ListView) findViewById(R.id.rechargeHistoryList);
-        lv.setAdapter(new RechargeHistoryAdapter(context,transactionID,orderID,rechargeAMMOUNT,phoneNO,rechargeTYPE,rechargeREMARK));
+        lv.setAdapter(new RechargeHistoryAdapter(RechargeHistory.this,transactionID,orderID,rechargeAMMOUNT,phoneNO,rechargeTYPE,rechargeREMARK));
 
     }
 
