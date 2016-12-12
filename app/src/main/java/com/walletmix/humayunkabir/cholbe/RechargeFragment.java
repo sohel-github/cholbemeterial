@@ -14,13 +14,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
 public class RechargeFragment extends Fragment implements View.OnClickListener{
 
+    EditText input_phone_number,input_amount;
+    RadioGroup rechargeTypeGropup;
+    RadioButton radioButtonPrepaid,radioButtonPostPaid;
     Button recharge;
     Context context;
 
@@ -38,6 +40,12 @@ public class RechargeFragment extends Fragment implements View.OnClickListener{
     public View onCreateView(LayoutInflater inflater,ViewGroup container,Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_recharge, container, false);
 
+        input_phone_number = (EditText)view.findViewById(R.id.input_phone_number);
+        rechargeTypeGropup = (RadioGroup)view.findViewById(R.id.recharge_type_group);
+        radioButtonPrepaid = (RadioButton)view.findViewById(R.id.radioButtonPrepaid);
+        radioButtonPostPaid = (RadioButton)view.findViewById(R.id.radioButtonPostPaid);
+        input_amount = (EditText)view.findViewById(R.id.input_amount);
+
         recharge = (Button)view.findViewById(R.id.btn_recharge);
         recharge.setOnClickListener(this);
 
@@ -46,27 +54,51 @@ public class RechargeFragment extends Fragment implements View.OnClickListener{
 
 
     @Override
-    public void onClick(View v) {
+    public void onClick(final View v) {
         switch (v.getId()){
             case R.id.btn_recharge:
 
                 final CharSequence[] items = {" Pay by Card "," Pay by Fund "};
-                
+
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
                 builder.setTitle("Choose Payment Option");
+
                 builder.setSingleChoiceItems(items, -1, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int item) {
-
 
                         switch(item)
                         {
                             case 0:
-                                Toast.makeText(getActivity(), "Pay by Card", Toast.LENGTH_LONG).show();
+
+                                String pre_paid = null;
+                                String post_paid = null;
+
+                                String phone_number = input_phone_number.getText().toString();
+
+
+
+                                if(radioButtonPrepaid.isSelected()){
+                                    pre_paid = radioButtonPrepaid.getText().toString();
+                                }
+                                if(radioButtonPostPaid.isSelected()){
+                                    post_paid = radioButtonPostPaid.getText().toString();
+                                }
+
+                                String amount = input_amount.getText().toString();
+
+                                String data = "Number : " + phone_number + "\nType : " + pre_paid + post_paid + "\nAmount : " + amount;
+
+                                Toast.makeText(getActivity(), "Pay by Card\n" + data, Toast.LENGTH_LONG).show();
+
                                 break;
+
                             case 1:
+
                                 Toast.makeText(getActivity(), "Pay by Fund", Toast.LENGTH_LONG).show();
+
                                 break;
                         }
+
                     }
                 });
                 builder.create();
