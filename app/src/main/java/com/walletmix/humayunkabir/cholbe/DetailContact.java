@@ -1,9 +1,11 @@
 package com.walletmix.humayunkabir.cholbe;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.view.MenuItem;
 
 public class DetailContact extends AppCompatActivity{
 
@@ -15,6 +17,9 @@ public class DetailContact extends AppCompatActivity{
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
 
     }
 
@@ -24,6 +29,15 @@ public class DetailContact extends AppCompatActivity{
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem menuItem) {
+        if (menuItem.getItemId() == android.R.id.home) {
+            Intent i = new Intent(this,MainActivity.class);
+            startActivity(i);
+        }
+        return super.onOptionsItemSelected(menuItem);
     }
 
 

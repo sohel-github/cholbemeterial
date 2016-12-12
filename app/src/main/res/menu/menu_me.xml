@@ -5,19 +5,14 @@
 
     <group android:menuCategory="container">
         <item
-            android:id="@+id/forget_pin"
-            android:title="Forget Pin"
-            android:orderInCategory="4"
+            android:id="@+id/forget_password"
+            android:title="Forget Password"
+            android:orderInCategory="1"
             app:showAsAction="never" />
         <item
-            android:id="@+id/change_pin"
-            android:title="Change Pin"
-            android:orderInCategory="5"
-            app:showAsAction="never" />
-        <item
-            android:id="@+id/recharge_history"
-            android:title="Recharge History"
-            android:orderInCategory="6"
+            android:id="@+id/change_password"
+            android:title="Change Password"
+            android:orderInCategory="2"
             app:showAsAction="never" />
     </group>
 

@@ -1,15 +1,16 @@
 package com.walletmix.humayunkabir.cholbe;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
 public class MeFragment extends Fragment {
-
-    //protected ArrayList<String> strings;
-    //private ListView listView;
 
 
     public MeFragment(){
@@ -19,6 +20,7 @@ public class MeFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
     }
 
     @Override
@@ -26,16 +28,30 @@ public class MeFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_me, container, false);
 
-        /*listView = (ListView) view.findViewById(R.id.list_view);
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1, strings);
-        listView.setAdapter(adapter);
-
-        return view; */
-
-
         return view;
 
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        menu.clear();
+        inflater.inflate(R.menu.menu_me, menu);
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.forget_password) {
+
+            return true;
+        }
+        if (id == R.id.change_password) {
+            Intent cp = new Intent("com.walletmix.humayunkabir.cholbe.CHANGEPASSWORD");
+            startActivity(cp);
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 }

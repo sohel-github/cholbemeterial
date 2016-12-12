@@ -24,7 +24,6 @@ public class RechargeFragment extends Fragment implements View.OnClickListener{
     RadioGroup rechargeTypeGropup;
     RadioButton radioButtonPrepaid,radioButtonPostPaid;
     Button recharge;
-    Context context;
 
     public RechargeFragment(){
 
@@ -69,33 +68,10 @@ public class RechargeFragment extends Fragment implements View.OnClickListener{
                         switch(item)
                         {
                             case 0:
-
-                                String pre_paid = null;
-                                String post_paid = null;
-
-                                String phone_number = input_phone_number.getText().toString();
-
-
-
-                                if(radioButtonPrepaid.isSelected()){
-                                    pre_paid = radioButtonPrepaid.getText().toString();
-                                }
-                                if(radioButtonPostPaid.isSelected()){
-                                    post_paid = radioButtonPostPaid.getText().toString();
-                                }
-
-                                String amount = input_amount.getText().toString();
-
-                                String data = "Number : " + phone_number + "\nType : " + pre_paid + post_paid + "\nAmount : " + amount;
-
-                                Toast.makeText(getActivity(), "Pay by Card\n" + data, Toast.LENGTH_LONG).show();
-
+                                Toast.makeText(getActivity(), "Pay by Card", Toast.LENGTH_LONG).show();
                                 break;
-
                             case 1:
-
                                 Toast.makeText(getActivity(), "Pay by Fund", Toast.LENGTH_LONG).show();
-
                                 break;
                         }
 

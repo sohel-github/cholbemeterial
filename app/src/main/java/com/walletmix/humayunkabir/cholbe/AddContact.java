@@ -7,12 +7,10 @@ import android.provider.MediaStore;
 import android.support.v7.widget.Toolbar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.Spinner;
 
 public class AddContact extends AppCompatActivity implements View.OnClickListener{
@@ -30,6 +28,9 @@ public class AddContact extends AppCompatActivity implements View.OnClickListene
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
 
         uploadImage = (ImageView) findViewById(R.id.uploadImage);
@@ -91,6 +92,15 @@ public class AddContact extends AppCompatActivity implements View.OnClickListene
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem menuItem) {
+        if (menuItem.getItemId() == android.R.id.home) {
+            Intent i = new Intent(this,MainActivity.class);
+            startActivity(i);
+        }
+        return super.onOptionsItemSelected(menuItem);
     }
 
 

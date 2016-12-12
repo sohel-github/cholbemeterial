@@ -1,15 +1,17 @@
 package com.walletmix.humayunkabir.cholbe;
 
-import android.app.Activity;
-import android.content.Context;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ListView;
 
 
-public class RechargeHistory extends Activity {
+public class RechargeHistory extends AppCompatActivity {
 
     ListView lv;
+
 
     String[] transactionID = {
             "245789365",
@@ -76,6 +78,11 @@ public class RechargeHistory extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.recharge_history);
 
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
         lv=(ListView) findViewById(R.id.rechargeHistoryList);
         lv.setAdapter(new RechargeHistoryAdapter(RechargeHistory.this,transactionID,orderID,rechargeAMMOUNT,phoneNO,rechargeTYPE,rechargeREMARK));
 
@@ -86,6 +93,14 @@ public class RechargeHistory extends Activity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_recharge, menu);
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem menuItem) {
+        if (menuItem.getItemId() == android.R.id.home) {
+            this.onBackPressed();
+        }
+        return super.onOptionsItemSelected(menuItem);
     }
 
 }

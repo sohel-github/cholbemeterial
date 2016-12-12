@@ -1,15 +1,16 @@
 package com.walletmix.humayunkabir.cholbe;
 
-import android.app.Activity;
-import android.graphics.Typeface;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
-import android.widget.TextView;
 
 
-public class EditContact extends Activity {
+public class EditContact extends AppCompatActivity {
 
 
     Spinner edit_contact_phone_number_spinner_1, edit_contact_phone_number_spinner_2,edit_contact_email_address_spinner_1, edit_contact_email_address_spinner_2;
@@ -19,6 +20,12 @@ public class EditContact extends Activity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.edit_contact);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
 
         edit_contact_phone_number_spinner_1 = (Spinner) findViewById(R.id.edit_contact_phone_number_spinner_1);
@@ -50,6 +57,15 @@ public class EditContact extends Activity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem menuItem) {
+        if (menuItem.getItemId() == android.R.id.home) {
+            Intent i = new Intent(this,MainActivity.class);
+            startActivity(i);
+        }
+        return super.onOptionsItemSelected(menuItem);
     }
 
 }
