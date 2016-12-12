@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".RechargeFragment">
+
+    <group android:menuCategory="container">
+        <item
+            android:id="@+id/forget_pin"
+            android:title="Forget Pin"
+            android:orderInCategory="4"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/change_pin"
+            android:title="Change Pin"
+            android:orderInCategory="5"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/recharge_history"
+            android:title="Recharge History"
+            android:orderInCategory="6"
+            app:showAsAction="never" />
+    </group>
+
+</menu>
