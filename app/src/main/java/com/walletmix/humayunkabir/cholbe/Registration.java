@@ -19,6 +19,7 @@ public class Registration extends AppCompatActivity {
         setContentView(R.layout.registration);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("Registration");
         setSupportActionBar(toolbar);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

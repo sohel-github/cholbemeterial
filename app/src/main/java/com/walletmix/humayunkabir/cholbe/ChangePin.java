@@ -16,6 +16,7 @@ public class ChangePin extends AppCompatActivity {
         setContentView(R.layout.change_pin);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("Change Pin");
         setSupportActionBar(toolbar);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

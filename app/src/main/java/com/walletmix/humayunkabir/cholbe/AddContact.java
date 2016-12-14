@@ -27,6 +27,7 @@ public class AddContact extends AppCompatActivity implements View.OnClickListene
         setContentView(R.layout.add_contact);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("Add Contact");
         setSupportActionBar(toolbar);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -97,8 +98,7 @@ public class AddContact extends AppCompatActivity implements View.OnClickListene
     @Override
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         if (menuItem.getItemId() == android.R.id.home) {
-            Intent i = new Intent(this,MainActivity.class);
-            startActivity(i);
+            this.onBackPressed();
         }
         return super.onOptionsItemSelected(menuItem);
     }

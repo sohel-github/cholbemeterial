@@ -1,6 +1,5 @@
 package com.walletmix.humayunkabir.cholbe;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -22,6 +21,7 @@ public class EditContact extends AppCompatActivity {
         setContentView(R.layout.edit_contact);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("Edit Contact");
         setSupportActionBar(toolbar);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -62,8 +62,7 @@ public class EditContact extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         if (menuItem.getItemId() == android.R.id.home) {
-            Intent i = new Intent(this,MainActivity.class);
-            startActivity(i);
+            this.onBackPressed();
         }
         return super.onOptionsItemSelected(menuItem);
     }

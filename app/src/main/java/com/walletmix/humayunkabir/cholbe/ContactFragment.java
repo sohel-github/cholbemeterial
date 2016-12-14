@@ -1,5 +1,6 @@
 package com.walletmix.humayunkabir.cholbe;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -74,7 +75,9 @@ public class ContactFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3) {
                 // TODO Auto-generated method stub
-                Toast.makeText(getActivity(), title[position], Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getActivity(), title[position], Toast.LENGTH_SHORT).show();
+                Intent i = new Intent("com.walletmix.humayunkabir.cholbe.DETAILCONTACT");
+                startActivity(i);
             }
         });
 

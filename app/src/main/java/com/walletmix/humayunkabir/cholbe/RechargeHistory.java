@@ -79,6 +79,7 @@ public class RechargeHistory extends AppCompatActivity {
         setContentView(R.layout.recharge_history);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("Recharge History");
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
